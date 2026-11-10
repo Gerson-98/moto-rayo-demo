@@ -2042,3 +2042,88 @@ h1, h2, h3, .app-header__titulo, .boton, .inicio-boton__texto, .app-nav a,
 .insignia-rol, .insignia-estado { border-radius: 2px; text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px; }
 .aviso-respaldo { border-radius: 4px; }
 .pie-login { font-size: 12px; }
+
+/* ---------- Barra de ticket (solo celular) ---------- */
+.barra-ticket { display: none; }
+
+/* ---------- Ajustes para celular ---------- */
+@media (max-width: 620px) {
+  .app-header { padding: 12px 14px 18px; gap: 8px; }
+  .app-header__titulo { font-size: 19px; }
+  .app-header__derecha { margin-left: auto; gap: 10px; }
+  .app-header__usuario { font-size: 13px; }
+
+  /* Menú en una sola fila deslizable */
+  .app-nav {
+    flex-wrap: nowrap; overflow-x: auto; width: 100%; gap: 6px; order: 3;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px;
+  }
+  .app-nav::-webkit-scrollbar { display: none; }
+  .app-nav a { white-space: nowrap; flex: 0 0 auto; padding: 10px 12px; min-height: 44px; display: flex; align-items: center; }
+
+  .app-main { padding: 14px 12px 28px; }
+  .app-main__header h2 { font-size: 20px; }
+
+  /* Inicio en dos columnas */
+  .inicio-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .inicio-boton { padding: 22px 8px 18px; gap: 10px; }
+  .inicio-boton__icono { width: 40px; height: 40px; }
+  .inicio-boton__texto { font-size: 15px; letter-spacing: 0.06em; }
+  .inicio-boton::after { width: 44px; height: 44px; right: -18px; top: -18px; }
+  .resumen-hoy-inicio { flex-wrap: wrap; gap: 12px; }
+
+  /* Categorías deslizables */
+  .venta-categorias { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 6px; }
+  .venta-categorias::-webkit-scrollbar { display: none; }
+  .chip-categoria { flex: 0 0 auto; min-height: 42px; }
+
+  /* Catálogo en dos columnas compactas */
+  .tarjeta-venta-producto__foto { height: 84px; }
+  .tarjeta-venta-producto__nombre { font-size: 14px; }
+
+  /* Barra fija para cobrar */
+  .barra-ticket {
+    display: flex; position: fixed; left: 10px; right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom)); z-index: 40;
+    align-items: center; gap: 10px; padding: 12px 14px; min-height: 54px;
+    background: #1b1e23; color: #fff; border: 2px solid var(--ambar); border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); font-family: var(--fuente-rotulo);
+    text-transform: uppercase; letter-spacing: 0.05em; font-weight: 800; font-size: 15px; cursor: pointer;
+  }
+  .barra-ticket.oculto { display: none; }
+  .barra-ticket__monto { margin-left: auto; color: var(--ambar); font-size: 18px; }
+  .barra-ticket__accion { background: var(--ambar); color: #14161a; padding: 8px 12px; border-radius: 3px; }
+  .venta-productos { padding-bottom: 72px; }
+}
+
+@media (max-width: 380px) {
+  .inicio-boton__texto { font-size: 13px; }
+  .tarjeta-venta-producto { padding: 10px; }
+  .tarjeta-venta-producto__foto { margin: -10px -10px 4px -10px; width: calc(100% + 20px); }
+}
+
+@media (max-width: 620px) {
+  .app-shell, .app-main, .venta-layout, .venta-productos, .venta-grilla { min-width: 0; max-width: 100%; }
+  .venta-productos { width: 100%; }
+}
+
+/* ---------- Modales en celular ---------- */
+.tarjeta-modal h3 { padding-right: 44px; }
+.boton-cerrar-modal-x { border-radius: 4px; background: #1b1e23; color: #fff; z-index: 2; }
+@media (max-width: 620px) {
+  .fondo-modal { padding: 10px; align-items: center; }
+  .tarjeta-modal, .tarjeta-modal--ancha {
+    padding: 22px 16px 18px; max-height: calc(100vh - 20px); max-height: calc(100dvh - 20px);
+    -webkit-overflow-scrolling: touch;
+  }
+  .modal-acciones { flex-direction: column-reverse; gap: 8px; }
+  .modal-acciones .boton { width: 100%; min-height: 48px; }
+  .campo input, .campo select, .campo textarea { font-size: 16px; } /* evita el zoom de iOS */
+}
+
+/* ---------- Reportes en celular ---------- */
+@media (max-width: 640px) {
+  .tarjeta-resumen { flex: 0 0 auto; }
+  .pestanas-periodo { flex-wrap: wrap; gap: 8px; max-width: 100%; }
+  .pestana-periodo { flex: 1 1 calc(50% - 8px); min-height: 44px; }
+}

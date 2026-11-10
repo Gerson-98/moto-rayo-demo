@@ -1,4 +1,4 @@
-const CACHE_NAME = 'moto-rayo-v2';
+const CACHE_NAME = 'moto-rayo-v3';
 
 const ARCHIVOS_ESTATICOS = [
   './',
@@ -16,6 +16,7 @@ const ARCHIVOS_ESTATICOS = [
   './js/impresora-ble.js',
   './js/aviso-respaldo.js',
   './js/venta.js',
+  './js/barra-ticket.js',
   './js/reportes.js',
   './js/usuarios.js',
   './js/caja.js',
