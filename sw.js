@@ -1,4 +1,4 @@
-const CACHE_NAME = 'moto-rayo-v1';
+const CACHE_NAME = 'moto-rayo-v2';
 
 const ARCHIVOS_ESTATICOS = [
   './',

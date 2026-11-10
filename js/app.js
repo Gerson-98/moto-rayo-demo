@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   if (hayUsuarios) {
+    try {
+      await DemoDatos.actualizarCatalogo();
+      await DemoDatos.asegurarCuentaDemo();
+    } catch (err) {
+      console.error(err);
+    }
+    document.getElementById('login-usuario').value = DemoDatos.USUARIO;
+    document.getElementById('login-password').value = DemoDatos.PASSWORD;
     formLogin.classList.remove('oculto');
     formSetup.classList.add('oculto');
     const avisoDemo = document.getElementById('demo-aviso');

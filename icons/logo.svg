@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Moto Rayo">
-  <rect width="512" height="512" fill="#1d1d21"/>
+  <rect width="512" height="512" fill="#1b1e23"/>
   <circle cx="256" cy="256" r="150" fill="none" stroke="#ffffff" stroke-width="26"/>
-  <circle cx="256" cy="256" r="150" fill="none" stroke="#d6361f" stroke-width="26" stroke-dasharray="70 36" stroke-dashoffset="20" opacity=".9"/>
-  <polygon points="282,118 186,282 248,282 224,396 332,224 270,224" fill="#d6361f" stroke="#ffffff" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#f5a300" stroke-width="26" stroke-dasharray="70 36" stroke-dashoffset="20" opacity=".9"/>
+  <polygon points="282,118 186,282 248,282 224,396 332,224 270,224" fill="#f5a300" stroke="#ffffff" stroke-width="10" stroke-linejoin="round"/>
 </svg>
